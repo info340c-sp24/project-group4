@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="authors:" content="Anica Na, Alex Han, Ray Hwang">
-    <meta name="description" content="Our website is a korean language learning app specialized in teaching conversational, daily korean through a variety of fun, interactive methods.">
+    <meta name="authors" content="Anica Na, Alex Han, Ray Hwang">
+    <meta name="description" content="Our website is a Korean language learning app specialized in teaching conversational, daily Korean through a variety of fun, interactive methods.">
     <link rel="icon" type="image/png" href="seoul.png">
     <link rel="stylesheet" href="styles.css">
     <title>SeoulTalk</title>
 </head>
 <body>
     <header>
-        <!-- Header content here -->
         <h1><img src="seoul.png" alt="Logo" style="vertical-align: middle;"> SeoulTalk</h1> 
         <nav>
             <ul>
@@ -22,12 +21,34 @@
     </header>
 
     <main>
-        <!-- Main content here -->
         <h2>Welcome to SeoulTalk</h2>
-        <p>This is the main page content.</p>
-        <!-- Include your form here -->
+        <div class="card-container">
+            <!-- Quiz Card -->
+            <div class="card">
+                <h3>Quizzes</h3>
+                <p>Test your knowledge with interactive quizzes.</p>
+                <a href="quizzes.html" class="card-link">Start Quizzes</a>
+            </div>
+            <!-- Progress Card -->
+            <div class="card">
+                <h3>Progress</h3>
+                <p>Track your learning progress and achievements.</p>
+                <a href="progress.html" class="card-link">View Progress</a>
+            </div>
+            <!-- Writing Practice Card -->
+            <div class="card">
+                <h3>Writing Practice</h3>
+                <p>Practice writing Korean characters and words.</p>
+                <a href="writing.html" class="card-link">Start Writing Practice</a>
+            </div>
+            <!-- Listening Practice Card -->
+            <div class="card">
+                <h3>Listening Practice</h3>
+                <p>Enhance your listening skills with audio exercises.</p>
+                <a href="listening.html" class="card-link">Start Listening Practice</a>
+            </div>
+        </div>
         <form>
-            <!-- Form inputs here -->
             <label for="search">Search:</label>
             <input type="text" id="search" name="search">
             <label for="filter">Filter:</label>
@@ -37,7 +58,6 @@
     </main>
 
     <footer>
-        <!-- Footer content here -->
         <p>&copy; 2024 Your App. All rights reserved.</p>
         <p>Contact: contact@example.com</p>
     </footer>
