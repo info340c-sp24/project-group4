@@ -13,6 +13,16 @@ header, footer {
     padding: 10px;
 }
 
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    color: #CD2E3A;
+    border-bottom: .2rem solid #CD2E3A;
+    transition: ease-out .25s;
+}
+
 nav ul {
     list-style: none;
 }
