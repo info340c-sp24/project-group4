@@ -13,12 +13,13 @@ header, footer {
     padding: 10px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
 }
 
 nav li {
     display: inline;
+    margin-right: 10px; /* Adjusted to have space between menu items */
 }
 
 .wordpage .app-container {
@@ -39,14 +40,59 @@ nav li {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; /* Adjusted max width to not exceed 600px */
 }
 
 .wordpage .character-display {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 20px 0;
+}
+
+.wordpage .character-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Dark background for the character box */
+    border-radius: 15px; /* Rounded corners for the character box */
+    width: 200px; /* Width of the character box */
+    height: 200px; /* Height of the character box */
+}
+
+.wordpage .korean-character {
+    font-size: 72px; /* Font size for the Korean character */
+    color: #FFF; /* Color for the Korean character */
+    position: relative;
+    z-index: 1;
+}
+
+.wordpage .sound-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.wordpage .sound-button img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 2px;
+}
+
+.wordpage .sound-button svg {
+    width: 20px;
+    height: auto;
 }
 
 .wordpage .choices {
@@ -63,11 +109,11 @@ nav li {
 }
 
 @media (max-width: 598px) {
-    .korean-character {
-        font-size: 48px;
+    .wordpage .korean-character {
+        font-size: 48px; /* Smaller font size for smaller screens */
     }
 
-    .choice {
-        flex-grow: 1;
+    .wordpage .choice {
+        flex-grow: 1; /* Allows choices to fill available space on smaller screens */
     }
 }

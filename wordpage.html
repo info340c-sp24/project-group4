@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="authors:" content="Anica Na, Alex Han, Ray Hwang">
-    <meta name="description" content="word learning page">
+    <meta name="authors" content="Anica Na, Alex Han, Ray Hwang">
+    <meta name="description" content="Word learning page">
     <title>Word</title>
     <link rel="icon" type="image/x-icon" href="img/seoul.png">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">     
-    <!-- normalize.css for cross-browser stuff -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,31 +15,31 @@
     <div class="app-container">
         <header>
             <h1>Korean Language Learner</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="wordpage.html">Words</a></li>
-                        <li><a href="studyguide.html">Study Guide</a></li>
-                        <li><a href="details.html">Details</a></li>
-                    </ul>
-                </nav>
-            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="wordpage.html">Words</a></li>
+                    <li><a href="studyguide.html">Study Guide</a></li>
+                    <li><a href="details.html">Details</a></li>
+                </ul>
+            </nav>
         </header>
-    
+
         <main class="main-content">
             <section class="challenge-section">
-                <div class="content-wrapper"> <!-- Flexbox container -->
+                <div class="content-wrapper">
                     <h2>What sound does this make?</h2>
                     <div class="character-display">
-                        <span class="korean-character" lang="ko">아</span>
-                        <button class="sound-button">
-                            <!-- SVG for sound icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 73" width="94" height="73">
-                            </svg>
-                            <span>Play Sound</span>
-                        </button>
+                        <div class="character-box">
+                            <span class="korean-character" lang="ko">아</span>
+                            <button class="sound-button">
+                                <img src="img/playsound.png" alt="play button" >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 73" width="20" height="20">
+                                    <!-- SVG content for sound icon -->
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    
                     <div class="choices" role="radiogroup">
                         <div class="choice" role="radio" tabindex="0" aria-checked="false">
                             <span class="label">1</span>
@@ -58,9 +57,9 @@
                 </div>
             </section>
         </main>
+
         <footer>
-            <!-- Footer content here -->
-            <p>&copy; 2024 Your App. All rights reserved.</p>
+            <p>&copy; 2024 Korean Language Learner. All rights reserved.</p>
             <p>Contact: contact@example.com</p>
         </footer>
     </div>
