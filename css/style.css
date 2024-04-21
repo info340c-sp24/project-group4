@@ -96,13 +96,13 @@ nav li {
 }
 
 .wordpage .choice-container {
-    border: 2px solid #000; /* Replace with your preferred border color and width */
+    border: 2px solid #000;
     padding: 20px;
-    border-radius: 15px; /* Adjust for desired roundness */
-    margin-top: 20px; /* Space above the choices box */
-    background-color: #f4f4f4; /* Replace with your preferred background color */
-    width: fit-content; /* Adjust width to fit the content */
-    margin-left: auto; /* Center the box horizontally */
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    width: fit-content;
+    margin-left: auto;
     margin-right: auto;
 }
 
