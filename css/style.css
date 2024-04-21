@@ -19,7 +19,7 @@ nav ul {
 
 nav li {
     display: inline;
-    margin-right: 10px; /* Adjusted to have space between menu items */
+    margin-right: 10px;
 }
 
 .wordpage .app-container {
@@ -54,15 +54,15 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333; /* Dark background for the character box */
-    border-radius: 15px; /* Rounded corners for the character box */
-    width: 200px; /* Width of the character box */
-    height: 200px; /* Height of the character box */
+    background-color: #333;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
 }
 
 .wordpage .korean-character {
-    font-size: 72px; /* Font size for the Korean character */
-    color: #FFF; /* Color for the Korean character */
+    font-size: 72px;
+    color: #FFF;
     position: relative;
     z-index: 1;
 }
@@ -95,17 +95,44 @@ nav li {
     height: auto;
 }
 
+.wordpage .choice-container {
+    border: 2px solid #000; /* Replace with your preferred border color and width */
+    padding: 20px;
+    border-radius: 15px; /* Adjust for desired roundness */
+    margin-top: 20px; /* Space above the choices box */
+    background-color: #f4f4f4; /* Replace with your preferred background color */
+    width: fit-content; /* Adjust width to fit the content */
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto;
+}
+
 .wordpage .choices {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 }
 
 .wordpage .choice {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 10px;
+    padding: 10px;
     cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    background-color: #FFF;
+    transition: background-color 0.3s ease;
+}
+
+.wordpage .choice:hover {
+    background-color: #eaeaea;
+}
+
+.wordpage .choice[aria-checked="true"] {
+    background-color: #ddd;
+}
+
+.wordpage .choice:focus {
+    outline: none;
+    border: 2px solid #007BFF;
 }
 
 .studyguide .card-footer {
@@ -119,11 +146,11 @@ nav li {
 
 @media (max-width: 598px) {
     .wordpage .korean-character {
-        font-size: 48px; /* Smaller font size for smaller screens */
+        font-size: 48px; 
     }
 
     .wordpage .choice {
-        flex-grow: 1; /* Allows choices to fill available space on smaller screens */
+        flex-grow: 1; 
     }
 }
 
