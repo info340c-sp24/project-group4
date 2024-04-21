@@ -12,55 +12,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="wordpage-body">
-    <header>
-        <h1>Korean Language Learner</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="wordpage.html">Words</a></li>
-                    <li><a href="studyguide.html">Study Guide</a></li>
-                    <li><a href="details.html">Details</a></li>
-                </ul>
-            </nav>
-        </h1>
-    </header>
-
-    <main class="main-content">
-        <section class="challenge-section">
-            <div class="content-wrapper"> <!-- Flexbox container -->
-                <h2>What sound does this make?</h2>
-                <div class="character-display">
-                    <span class="korean-character" lang="ko">아</span>
-                    <button class="sound-button">
-                        <!-- SVG for sound icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 73" width="94" height="73">
-                        </svg>
-                        <span>Play Sound</span>
-                    </button>
+<body class="wordpage">
+    <div class="app-container">
+        <header>
+            <h1>Korean Language Learner</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="wordpage.html">Words</a></li>
+                        <li><a href="studyguide.html">Study Guide</a></li>
+                        <li><a href="details.html">Details</a></li>
+                    </ul>
+                </nav>
+            </h1>
+        </header>
+    
+        <main class="main-content">
+            <section class="challenge-section">
+                <div class="content-wrapper"> <!-- Flexbox container -->
+                    <h2>What sound does this make?</h2>
+                    <div class="character-display">
+                        <span class="korean-character" lang="ko">아</span>
+                        <button class="sound-button">
+                            <!-- SVG for sound icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 73" width="94" height="73">
+                            </svg>
+                            <span>Play Sound</span>
+                        </button>
+                    </div>
+                    
+                    <div class="choices" role="radiogroup">
+                        <div class="choice" role="radio" tabindex="0" aria-checked="false">
+                            <span class="label">1</span>
+                            <span class="text">a</span>
+                        </div>
+                        <div class="choice" role="radio" tabindex="0" aria-checked="false">
+                            <span class="label">2</span>
+                            <span class="text">e</span>
+                        </div>
+                        <div class="choice" role="radio" tabindex="0" aria-checked="false">
+                            <span class="label">3</span>
+                            <span class="text">o</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="choices" role="radiogroup">
-                    <div class="choice" role="radio" tabindex="0" aria-checked="false">
-                        <span class="label">1</span>
-                        <span class="text">a</span>
-                    </div>
-                    <div class="choice" role="radio" tabindex="0" aria-checked="false">
-                        <span class="label">2</span>
-                        <span class="text">e</span>
-                    </div>
-                    <div class="choice" role="radio" tabindex="0" aria-checked="false">
-                        <span class="label">3</span>
-                        <span class="text">o</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Footer content here -->
-        <p>&copy; 2024 Your App. All rights reserved.</p>
-        <p>Contact: contact@example.com</p>
-    </footer>
+            </section>
+        </main>
+        <footer>
+            <!-- Footer content here -->
+            <p>&copy; 2024 Your App. All rights reserved.</p>
+            <p>Contact: contact@example.com</p>
+        </footer>
+    </div>
 </body>
 </html>
