@@ -135,6 +135,23 @@ nav li {
     border: 2px solid #007BFF;
 }
 
+.studyguide .card-footer {
+    background-color: white;
+}
+
+.studyguide .card-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
@@ -143,4 +160,8 @@ nav li {
     .wordpage .choice {
         flex-grow: 1; 
     }
+}
+
+@media (min-width: 992px) {
+
 }
