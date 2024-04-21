@@ -144,6 +144,14 @@ nav li {
     object-fit: cover;
 }
 
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
@@ -155,5 +163,5 @@ nav li {
 }
 
 @media (min-width: 992px) {
-    
+
 }
