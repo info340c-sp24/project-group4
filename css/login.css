@@ -1,0 +1,12 @@
+.card {
+    border: 2px solid #0047A0;
+}
+
+@media (min-height: 630px) {
+    footer {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+    }
+}
