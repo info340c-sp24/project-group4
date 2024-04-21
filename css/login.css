@@ -2,7 +2,7 @@
     border: 2px solid #0047A0;
 }
 
-@media (min-height: 630px) {
+@media (min-height: 710px) {
     footer {
         width: 100%;
         text-align: center;
