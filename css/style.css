@@ -108,6 +108,15 @@ nav li {
     cursor: pointer;
 }
 
+.studyguide .card-footer {
+    background-color: white;
+}
+
+.studyguide .card-img {
+    width: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; /* Smaller font size for smaller screens */
@@ -116,4 +125,8 @@ nav li {
     .wordpage .choice {
         flex-grow: 1; /* Allows choices to fill available space on smaller screens */
     }
+}
+
+@media (min-width: 992px) {
+    
 }
