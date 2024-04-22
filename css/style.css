@@ -87,6 +87,11 @@ img.profile-icon {
     height: auto; 
 }
 
+image.welcome-icon {
+    width: 24px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
