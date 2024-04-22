@@ -61,6 +61,14 @@ nav a:active {
     color:white;
 }
 
+.hamburger {
+    position: fixed;
+    color: #36454F;
+    top: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
 .card {
     transition: all 0.3s;
 }
@@ -85,11 +93,15 @@ nav a:active {
 }
 
 @media (min-width: 992px) {
-    main {
+    main, header {
         margin-left: 220px;
     }
 
     nav {
         display: block;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
