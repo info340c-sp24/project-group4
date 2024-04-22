@@ -61,8 +61,8 @@ nav a:active {
     color:white;
 }
 
-.hamburger {
-    position: fixed;
+header .hamburger {
+    position: static;
     color: #36454F;
     top: 0;
     left: 0;
