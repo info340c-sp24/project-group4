@@ -80,6 +80,10 @@ nav a:active {
     align-items: center; 
 }
 
+.card-content {
+    flex: 1; 
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
