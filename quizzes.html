@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/quizzes.css">
     <style>
+      /* Styles for header */
+      header {
+        text-align: center;
+      }
+
+      header h1 {
+        display: inline-block;
+        margin-right: 20px; /* Adjust the margin as needed */
+      }
+
+      header nav {
+        display: inline-block;
+      }
+
+      header form {
+        display: inline-block;
+      }
+
       .button-container {
         text-align: center;
       }
@@ -26,8 +44,7 @@
 <body>
     <header>
         <!-- Header content here -->
-        <a href="#" class="hamburger"><span class="material-icons" aria-label="Menu">menu</span></a>
-        <h1><img src="img/seoul.png" alt="Logo" style="vertical-align: middle;"> Profile</h1> 
+        <h1><img src="img/seoul.png" alt="Logo" style="vertical-align: middle;"> Quizzes</h1> 
         <nav>
             <ul>
                 <li><img src="img/seoul.png" alt="Logo" style="vertical-align: middle;"> SeoulTalk</li>
@@ -48,12 +65,14 @@
             <hr>
         </form>
     </header>
-    <h1>Welcome to Quizzes!</h1>
-    <p>Test your knowledge by taking this quiz.</p>
-    <img src="img/quizzes.png" alt="Quiz Image">
-    <div class="button-container">
-      <button class="start-button" onclick="startQuiz()">Let's Test!</button>
-    </div>
+    <main>
+      <h1>Welcome to Quizzes!</h1>
+      <p>Test your knowledge by taking this quiz.</p>
+      <img src="img/quizzes.png" alt="Quiz Image">
+      <div class="button-container">
+        <button class="start-button" onclick="startQuiz()">Let's Test!</button>
+      </div>
+    </main>
 
     <footer>
         <!-- Footer content here -->
@@ -62,4 +81,3 @@
     </footer>
 </body>
 </html>
-
