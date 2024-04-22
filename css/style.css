@@ -42,6 +42,8 @@ nav li {
 
 nav a {
     padding: 20px 8px 20px 16px;
+    margin: 0px 5px 0 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 20px;
     color: #36454F;
