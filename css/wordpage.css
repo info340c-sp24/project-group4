@@ -111,3 +111,32 @@
     outline: none;
     border: 2px solid #007BFF;
 }
+
+.wordpage .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.wordpage .prev-button, .wordpage .next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.wordpage .prev-button {
+    margin-right: 20px;
+}
+
+.wordpage .next-button {
+    margin-left: 20px;
+}
+
+
+.wordpage .prev-button:hover, .wordpage .next-button:hover {
+    background-color: #0056b3;
+}
