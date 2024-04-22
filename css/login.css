@@ -2,6 +2,10 @@
     border: 2px solid #0047A0;
 }
 
+.card:hover {
+    transform: none;
+}
+
 @media (min-height: 710px) {
     footer {
         width: 100%;
