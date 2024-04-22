@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Guide</title>
+    <link rel="icon" type="image/x-icon" href="img/seoul.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/studyguide.css">
+</head>
+<body class="studyguide">
+    <header>
+        <!-- Header content here -->
+        <h1><img src="img/seoul.png" alt="Logo" style="vertical-align: middle;"> Study Guide</h1> 
+        <nav>
+            <ul>
+                <li><img src="img/seoul.png" alt="Logo" style="vertical-align: middle;"> SeoulTalk</li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="wordpage.html">WORDS</a></li>
+                <li><a href="studyguide.html">STUDY GUIDE</a></li>
+                <li><a href="details.html">DETAILS</a></li>
+                <li><a href= "login.html">PROFILE</a></li>
+            </ul>
+        </nav>
+        <!-- Move the form here -->
+        <form>
+            <!-- Form inputs here -->
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search">
+            <label for="filter">Filter:</label>
+            <input type="text" id="filter" name="filter">
+            <button type="submit">Submit</button>
+            <hr>
+        </form>
+    </header>
+
+    <main>
+        <div class="card-container">
+            <div class="row">
+                <div class="d-flex col-sm-12 col-lg-4">
+                    <div class="card m-4 p-2 shadow-sm">
+                        <!-- Card 1 -->
+                        <div class="card-content text-center">
+                            <h3 class="fw-bold">Beginner Level</h3>
+                            <p class="card-text">Beginner level learners have basic or no knowledge of Korean vocabulary, grammar, and sentence structures. They may be able to introduce themselves, ask simple questions, and engage in basic conversations about everyday topics.</p>
+                            <cite><a href="https://commons.wikimedia.org/wiki/File:Hangeul.svg"><img class="card-img img-fluid pb-2" src="img/hangul.png" alt="picture of hangul, alphabet"></a></cite>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#beginnerModal">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex col-sm-12 col-lg-4">
+                    <div class="card m-4 p-2 shadow-sm">
+                        <!-- Card 2 -->
+                        <div class="card-content text-center">
+                            <h3 class="fw-bold">Intermediate Level</h3>
+                            <p class="card-text">Intermediate level learners have a good understanding of Korean grammar and can express themselves more fluently. They can discuss a wider range of topics, understand more complex sentences, and read basic texts with some assistance.</p>
+                            <cite><a href="https://www.istockphoto.com/photo/korean-alphabet-gm172855955-5682815?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fhangul%2F&utm_term=hangul"><img class="card-img img-fluid pb-2" src="img/intermediate.png" alt="picture of old writing in Korean"></a></cite>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#intermediateModal">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex col-sm-12 col-lg-4">
+                    <div class="card m-4 p-2 shadow-sm">
+                        <!-- Card 3 -->
+                        <div class="card-content text-center">
+                            <h3 class="fw-bold">Advanced Level</h3>
+                            <p class="card-text">Advanced level learners have a high level of proficiency in Korean. They can engage in in-depth conversations, read and comprehend more complex texts, and write essays or reports on different topics.</p>
+                            <cite><a href="https://www.istockphoto.com/photo/gyeongbokgung-palace-twilight-sunset-gm509661920-85890191"><img class="card-img img-fluid pb-2" src="img/gyeongbokgung.png" alt="picture of Gyeongbokgung Palace"></a></cite>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advancedModal">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <!-- Beginner Level Modal -->
+        <div class="modal" id="beginnerModal" tabindex="-1" aria-labelledby="beginnerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="beginnerModalLabel">Beginner Level</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>We recommend studying the fundamentals of the Korean language for at least 10 minutes everyday. Set up a plan/calendar to focus on Hangul, grammar, and basic vocabulary. Once you are comfortable reading basic terms, move on to intermediate.</p>
+                        <li>Hangul (Korean Alphabet): Mastering Hangul is essential as it forms the foundation of the language. Focus on learning how to read and write each character.</li>
+                        <li>Basic Vocabulary and Phrases: Start with everyday vocabulary and phrases such as greetings, introductions, numbers, colors, and common objects.</li>
+                        <li>Grammar Fundamentals: Learn basic sentence structure, verb conjugation, and essential grammar patterns.</li>
+                        <li>Listening and Speaking Practice: Practice listening to Korean sounds and speaking simple phrases to improve pronunciation and fluency.</li>
+                        <li>Reading and Writing Practice: Practice reading simple texts and writing basic sentences to reinforce your understanding of Hangul and grammar.</li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type ="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intermediate Level Modal -->
+        <div class="modal" id="intermediateModal" tabindex="-1" aria-labelledby="intermediateModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="intermediateModalLabel">Intermediate Level</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>At the intermediate level, you should already know Hangul and the basic grammar patterns of the Korean language. At this point, we recommend focusing on learning about specific topics that you enjoy. Dive deeper into grammar, reading comprehension, but most importantly include speaking practice. We recommend 20 minutes a day.</p>
+                        <li>Expanded Vocabulary: Continue building your vocabulary with more diverse and complex words and expressions related to various topics such as travel, food, hobbies, etc.</li>
+                        <li>Grammar Depth: Dive deeper into Korean grammar, focusing on more advanced sentence structures, verb conjugations, and grammar patterns.</li>
+                        <li>Reading Comprehension: Read longer texts such as short stories, articles, or dialogues to improve reading comprehension and expand your understanding of Korean syntax and vocabulary.</li>
+                        <li>Listening Skills: Engage with a variety of audio materials like podcasts, news broadcasts, or Korean dramas to improve listening comprehension and expose yourself to different accents and speech styles.</li>
+                        <li>Speaking Practice with Fluency: Engage in conversations with native speakers or language partners to practice speaking fluently and naturally, focusing on expressing more complex ideas and opinions.</li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type ="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Level Modal -->
+        <div class="modal" id="advancedModal" tabindex="-1" aria-labelledby="advancedModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="advancedModalLabel">Advanced Level</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>At the advanced level, you should feel comfortable talking with others in Korean. Focus on learning informal Korean and colloquialisms or slang that is more commonly used today. Focus on the cultural context of Korean. We recommend studying at least 20 minutes a day.</p>
+                        <li>Specialized Vocabulary: Focus on acquiring vocabulary related to specific fields of interest or professional domains, such as business, science, literature, etc.</li>
+                        <li>Idiomatic Expressions and Colloquialisms: Learn idiomatic expressions, slang, and colloquialisms to sound more natural and culturally aware in your speech.</li>
+                        <li>Advanced Grammar and Syntax: Master advanced grammar concepts, intricate sentence structures, and subtle nuances in usage to attain a higher level of linguistic proficiency.</li>
+                        <li>Reading Advanced Texts: Read complex texts like novels, academic papers, or news articles to deepen your understanding of Korean literature, culture, and current affairs.</li>
+                        <li>Cultural Immersion: Immerse yourself in Korean culture by watching movies, TV shows, and engaging with native speakers to gain a deeper understanding of cultural context and social norms.</li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type ="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+        <p>&copy; 2024 Your App. All rights reserved.</p>
+        <p>Contact: contact@example.com</p>
+    </footer>
+</body>
+</html>

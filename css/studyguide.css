@@ -1,0 +1,8 @@
+.card-footer {
+    background-color: white;
+}
+
+.card-img {
+    width: 100%;
+    object-fit: cover;
+}

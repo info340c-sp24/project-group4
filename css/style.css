@@ -1,9 +1,87 @@
 * {
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rubik';
 }
 
 #logo {
     width: 20px; 
     height: auto;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    display: none;
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ADD8E6;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    padding: 20px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #36454F;
+    display: block;
+}
+
+nav a:hover, nav a:focus {
+    background-color: white;
+    color: black;
+    transition: ease-out .25s;
+}
+
+nav a:active {
+    background-color: #ADD8E6;
+    color:white;
+}
+
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 598px) {
+    .wordpage .korean-character {
+        font-size: 48px; 
+    }
+
+    .wordpage .choice {
+        flex-grow: 1; 
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        margin-left: 220px;
+    }
+
+    nav {
+        display: block;
+    }
 }
