@@ -88,8 +88,8 @@ img.profile-icon {
 }
 
 image.welcome-icon {
-    width: 24px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 10px; 
+    height: auto; 
 }
 
 @media (max-width: 598px) {
