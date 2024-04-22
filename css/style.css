@@ -82,6 +82,11 @@ header .hamburger {
     height: auto;
 }
 
+img.profile-icon {
+    width: 100px; 
+    height: auto; 
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
