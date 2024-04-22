@@ -2,7 +2,7 @@
     background-color: white;
 }
 
-.card-img {
+.card img {
     width: 100%;
     object-fit: cover;
 }
