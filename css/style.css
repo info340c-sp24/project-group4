@@ -95,6 +95,18 @@ img.welcome-icon {
     height: auto; 
 }
 
+footer {
+    text-align: center;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 12px; /* Smaller font size */
+    background-color: #333; /* Optional: adding a background color */
+    color: #fff; /* Optional: changing text color for better contrast */
+}
+
+footer p {
+    margin: 2px 0; /* Reduced margin between paragraphs */
+}
+
 @media (max-width: 598px) {
     .wordpage .korean-character {
         font-size: 48px; 
