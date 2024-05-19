@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  margin: 30;
+  height: inherit;
+}
+h2 {
+  font-weight: 600;
+  text-align: center;
+  padding-top: 1em;
+}
+a {
+  color: #0047A0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

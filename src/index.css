@@ -119,7 +119,7 @@ footer p {
 
 /* Change layout for large screens */
 @media (min-width: 992px) {
-    main, header {
+    body {
         margin-left: 200px;
     }
 
