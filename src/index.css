@@ -1,0 +1,133 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+#logo {
+    width: 25px; 
+    height: auto;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style navigation sidebar */
+nav {
+    display: none;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F9F6F0;
+    border-right: 1px solid #D3D3D3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    padding: 20px 8px 20px 16px;
+    margin: 0px 5px 0 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #36454F;
+    display: block;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #ADD8E6;
+    color: black;
+    transition: ease-out .25s;
+}
+
+nav a:active {
+    background-color: #ADD8E6;
+    color:white;
+}
+
+header .hamburger {
+    position: static;
+    color: #36454F;
+    top: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+/* Style cards */
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 256px;
+    height: auto;
+}
+
+img.profile-icon {
+    width: 100px; 
+    height: auto; 
+}
+
+img.welcome-icon {
+    width: 45px; 
+    height: auto; 
+}
+
+footer {
+    text-align: center;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 12px; /* Smaller font size */
+    background-color: #8ccfff; /* Optional: adding a background color */
+    color: #fff; /* Optional: changing text color for better contrast */
+}
+
+footer p {
+    margin: 2px 0; /* Reduced margin between paragraphs */
+}
+
+@media (max-width: 598px) {
+    .wordpage .korean-character {
+        font-size: 48px; 
+    }
+
+    .wordpage .choice {
+        flex-grow: 1; 
+    }
+}
+
+/* Change layout for large screens */
+@media (min-width: 992px) {
+    main, header {
+        margin-left: 200px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

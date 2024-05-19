@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import MainPage from './pages/Mainpage';
+import MainPage from './pages/MainPage';
 import Footer from './components/Footer';
 
 function App() {
