@@ -71,6 +71,10 @@ header .hamburger {
     padding: 1.25rem;
 }
 
+label {
+    padding-right: 2px;
+}
+
 /* Style cards */
 .card {
     transition: all 0.3s;
