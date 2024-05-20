@@ -34,7 +34,7 @@ function MainPage() {
             <div className="card-content">
               <h3>Writing Practice</h3>
               <p>Practice writing Korean characters and sentences.</p>
-              <a href="writing_practice.html" className="btn">Explore</a>
+              <Link to="/writing" className="btn">Explore</Link>
             </div>
           </div>
           <div className="card">
