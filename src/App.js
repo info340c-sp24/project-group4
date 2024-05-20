@@ -7,7 +7,6 @@ import WordPage from './pages/WordPage';
 import Quizzes from './pages/Quizzes'
 import Login from './pages/Login';
 import StudyGuidePage from './pages/StudyGuidePage';
-import TypingPractice from './pages/Writing';
 import Writing from './pages/Writing';
 
 function App() {
