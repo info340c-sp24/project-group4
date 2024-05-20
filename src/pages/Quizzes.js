@@ -5,7 +5,7 @@ function Quizzes() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [showFeedback, setShowFeedback] = useState(false);
-
+    const [showQuiz, setShowQuiz] = useState(false);
     const quizQuestions = [
         {
             questionText: "안녕하세요 means what in korean?",
@@ -37,7 +37,7 @@ function Quizzes() {
             setSelectedOption(null);
             setShowFeedback(false);
         } else {
-            // End of quiz, handle results or display a message
+            // End of quiz
         }
     };
 
@@ -49,47 +49,58 @@ function Quizzes() {
         }
     };
 
+    const startQuiz = () => {
+        setShowQuiz(true);
+    };
+
     return (
         <div className="app-container"> 
             <main className="main-content">
                 <section className="challenge-section">
                     <div className="content-wrapper">
-                        <h2>Welcome to Quizzes!</h2> 
-                        <p>Test your knowledge by taking this quiz.</p>
-                        <img src="img/quizzes.png" alt="Quiz Image" />
-
-                        <div className="character-display">
-                            <div className="character-box">
-                                <p>{question.questionText}</p>
+                        {!showQuiz ? ( 
+                            <div>
+                                <img src="img/quizzes.png" alt="Quiz Image" />
+                                <button className="start-button" onClick={startQuiz}>
+                                    Start Quiz
+                                </button>
                             </div>
-                        </div>
-
-                        <div className="choices" role="radiogroup">
-                            {question.options.map((option, index) => (
-                                <div 
-                                    className={`choice ${selectedOption === option ? (option === question.correctAnswer ? 'correct' : 'incorrect') : ''}`} 
-                                    key={index} 
-                                    onClick={() => handleOptionClick(option)} 
-                                    tabIndex="0" 
-                                    role="radio" 
-                                    aria-checked={selectedOption === option}
-                                >
-                                    <span className="label">{index + 1}.</span>
-                                    <span className="text">{option}</span>
+                        ) : (
+                            <>
+                                <div className="character-display">
+                                    <div className="character-box">
+                                        <p>{question.questionText}</p>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
 
-                        {showFeedback && (
-                            <div className="feedback">
-                                {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
-                            </div>
+                                <div className="choices" role="radiogroup">
+                                    {question.options.map((option, index) => (
+                                        <div 
+                                            className={`choice ${selectedOption === option ? (option === question.correctAnswer ? 'correct' : 'incorrect') : ''}`} 
+                                            key={index} 
+                                            onClick={() => handleOptionClick(option)} 
+                                            tabIndex="0" 
+                                            role="radio" 
+                                            aria-checked={selectedOption === option}
+                                        >
+                                            <span className="label">{index + 1}.</span>
+                                            <span className="text">{option}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {showFeedback && (
+                                    <div className="feedback">
+                                        {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
+                                    </div>
+                                )}
+
+                                <div className="navigation-buttons">
+                                    <button className="prev-button" onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>Previous</button>
+                                    <button className="next-button" onClick={goToNextQuestion}>{currentQuestionIndex === quizQuestions.length - 1 ? 'Finish' : 'Next'}</button>
+                                </div>
+                            </>
                         )}
-
-                        <div className="navigation-buttons">
-                            <button className="prev-button" onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>Previous</button>
-                            <button className="next-button" onClick={goToNextQuestion}>{currentQuestionIndex === quizQuestions.length - 1 ? 'Finish' : 'Next'}</button>
-                        </div>
                     </div>
                 </section>
             </main>

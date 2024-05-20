@@ -9,6 +9,7 @@ img {
     margin-bottom: 20px;
 }
 
+/* Start Button Styles */
 .start-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -23,4 +24,43 @@ img {
 
 .start-button:hover {
     background-color: #0056b3;
+}
+
+/* Quiz Content Transition */
+.character-display {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.character-display.show { 
+    opacity: 1;
+}
+
+/* Answer Choice Button Styles */
+.choice {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;  /* Light gray background */
+    color: #333;                /* Darker text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choice:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/* Add styles for correct and incorrect answers */
+.choice.correct {
+    background-color: #4CAF50; /* Green for correct */
+    color: white;
+}
+
+.choice.incorrect {
+    background-color: #f44336; /* Red for incorrect */
+    color: white;
 }
