@@ -7,6 +7,8 @@ import WordPage from './pages/WordPage';
 import Quizzes from './pages/Quizzes'
 import Login from './pages/Login';
 import StudyGuidePage from './pages/StudyGuidePage';
+import TypingPractice from './pages/Writing';
+import Writing from './pages/Writing';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/words" element={<WordPage />} />
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/study" element={<StudyGuidePage />} />
+          <Route path='/writing' element={<Writing />} />
           <Route path="/profile" element={<Login />} />
         </Routes>
         <Footer />
