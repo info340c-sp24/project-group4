@@ -25,38 +25,36 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-bottom: 20px; /* Adjusted for better spacing */
+    width: auto;             
 }
 
 .start-button:hover {
     background-color: #0056b3;
 }
 
-/* Quiz Content Transition */
-.character-display {
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out;
-    width: 100%; /* Ensures quiz content takes full width */
-}
-
-.character-display.show { 
+.character-display{ 
     opacity: 1;
 }
 
 /* Answer Choice Button Styles */
+.choices {
+    display: flex; /* Arrange choices horizontally */
+    justify-content: center; /* Center choices within container */
+    flex-wrap: wrap; /* Allow wrapping to next line if needed */
+}
+
 .choice {
-    display: block; /* Display choices as blocks */
-    width: 80%;   /* Adjust width as needed */
-    margin: 10px auto; /* Center the choices */
+    flex: 1 0 200px; /* Give each choice some flexibility and a minimum width */
+    margin: 10px;   /* Add space between choices */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #f0f0f0;  /* Light gray background */
-    color: #333;                /* Darker text color */
+    background-color: #f0f0f0;
+    color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    text-align: center; /* Center text within buttons */
+    text-align: center;
 }
 
 .choice:hover {
