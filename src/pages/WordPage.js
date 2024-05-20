@@ -48,39 +48,41 @@ function WordPage() {
     };
 
     return (
-        <div className="app-container">
-            <main className="main-content">
-                <section className="challenge-section">
-                    <div className="content-wrapper">
-                        <h2>What sound does this make?</h2>
-                        <div className="character-display">
-                            <div className="character-box">
-                                <span className="korean-character" lang="ko">{question.character}</span>
-                            </div>
-                        </div>
-                        
-                        <div className="choices" role="radiogroup">
-                            {question.options.map((option, index) => (
-                                <div className="choice" key={index} onClick={() => handleOptionClick(option)} tabIndex="0" role="radio" aria-checked={selectedOption === option}>
-                                    <span className="label">{index + 1}.</span>
-                                    <span className="text">{option}</span>
+        <div className='wordpage'>
+            <div className="app-container">
+                <main className="main-content">
+                    <section className="challenge-section">
+                        <div className="content-wrapper">
+                            <h2>What sound does this make?</h2>
+                            <div className="character-display">
+                                <div className="character-box">
+                                    <span className="korean-character" lang="ko">{question.character}</span>
                                 </div>
-                            ))}
-                        </div>
-
-                        {showFeedback && (
-                            <div className="feedback">
-                                {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
                             </div>
-                        )}
+                            
+                            <div className="choices" role="radiogroup">
+                                {question.options.map((option, index) => (
+                                    <div className="choice" key={index} onClick={() => handleOptionClick(option)} tabIndex="0" role="radio" aria-checked={selectedOption === option}>
+                                        <span className="label">{index + 1}.</span>
+                                        <span className="text">{option}</span>
+                                    </div>
+                                ))}
+                            </div>
 
-                        <div className="navigation-buttons">
-                            <button className="prev-button" onClick={goToPreviousQuestion}>Previous</button>
-                            <button className="next-button" onClick={goToNextQuestion}>Next</button>
+                            {showFeedback && (
+                                <div className="feedback">
+                                    {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
+                                </div>
+                            )}
+
+                            <div className="navigation-buttons">
+                                <button className="prev-button" onClick={goToPreviousQuestion}>Previous</button>
+                                <button className="next-button" onClick={goToNextQuestion}>Next</button>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </main>
+                    </section>
+                </main>
+            </div>
         </div>
     );
 }
