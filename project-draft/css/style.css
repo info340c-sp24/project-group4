@@ -71,10 +71,6 @@ header .hamburger {
     padding: 1.25rem;
 }
 
-label {
-    padding-right: 2px;
-}
-
 /* Style cards */
 .card {
     display: flex;             
@@ -85,7 +81,7 @@ label {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .card img {

@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import Footer from './components/Footer';
 import WordPage from './pages/WordPage';
 import Quizzes from './pages/Quizzes'
+import StudyGuidePage from './pages/StudyGuidePage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" element={<MainPage />} />
           <Route path="/words" element={<WordPage />} />
           <Route path="/quizzes" element={<Quizzes />} />
+          <Route path="/study" element={<StudyGuidePage />} />
         </Routes>
         <Footer />
       </div>
