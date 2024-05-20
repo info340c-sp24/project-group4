@@ -77,6 +77,10 @@ label {
 
 /* Style cards */
 .card {
+    display: flex;             
+    flex-direction: column;   
+    align-items: center;       
+    text-align: center;       
     transition: all 0.3s;
 }
 
@@ -85,8 +89,9 @@ label {
 }
 
 .card img {
-    width: 256px;
-    height: auto;
+    width: 100%;     
+    height: auto;   
+    margin-bottom: 10px;
 }
 
 img.profile-icon {
@@ -133,5 +138,15 @@ footer p {
 
     .hamburger {
         display: none;
+    }
+
+    .card {
+        flex-direction: row;     
+        text-align: left;      
+    }
+
+    .card img {
+        width: 50%;  
+        margin-right: 20px; 
     }
 }

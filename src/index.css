@@ -77,6 +77,9 @@ input, label {
 
 /* Style cards */
 .card {
+    display: flex;            
+    flex-direction: column;    
+    align-items: center;       
     transition: all 0.3s;
 }
 
@@ -85,8 +88,10 @@ input, label {
 }
 
 .card img {
-    width: 256px;
-    height: auto;
+    display: block;  
+    width: 35%;  
+    height: auto;    
+    margin-bottom: 10px; 
 }
 
 img.profile-icon {

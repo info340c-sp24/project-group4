@@ -4,11 +4,13 @@ body {
 }
 
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+    display: flex; /* Use flexbox to center and align content */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;   /* Center items horizontally */
+    width: 100%; /* Use full available width */
+    margin: 0 auto;        /* Use margin to center the entire content container */
+  }
+  
 img {
     max-width: 100%;
     height: auto;
@@ -17,6 +19,8 @@ img {
 
 /* Start Button Styles */
 .start-button {
+    display: block;
+    text-align: center;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -25,7 +29,8 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: auto;             
+    width: 100%; 
+    margin-bottom: 150px;            
 }
 
 .start-button:hover {
@@ -38,14 +43,17 @@ img {
 
 /* Answer Choice Button Styles */
 .choices {
-    display: flex; /* Arrange choices horizontally */
-    justify-content: center; /* Center choices within container */
-    flex-wrap: wrap; /* Allow wrapping to next line if needed */
+    display: flex;            
+    justify-content: center;   
+    flex-wrap: nowrap;         
+    gap: 10px;                
+    width: 100%;              
 }
 
 .choice {
-    flex: 1 0 200px; /* Give each choice some flexibility and a minimum width */
-    margin: 10px;   /* Add space between choices */
+    flex: 1 1 auto; 
+    min-width: 150px;
+    margin: 10px;   
     padding: 10px 20px;
     font-size: 16px;
     background-color: #f0f0f0;

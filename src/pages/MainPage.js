@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function MainPage() {
   return (
@@ -17,7 +18,7 @@ function MainPage() {
             <div className="card-content">
               <h3>Quizzes</h3>
               <p>Test your knowledge with interactive quizzes.</p>
-              <a href="quizzes.html" className="btn">Explore</a>
+              <Link to="/quizzes" className="btn">Explore</Link>
             </div>
           </div>
           <div className="card">
@@ -41,7 +42,7 @@ function MainPage() {
             <div className="card-content">
               <h3>Listening Practice</h3>
               <p>Enhance your listening skills with audio exercises.</p>
-              <a href="wordpage.html" className="btn">Explore</a>
+              <Link to="/words" className="btn">Explore</Link>
             </div>
           </div>
         </div>
