@@ -99,7 +99,7 @@ input, label {
 
 .card img {
     display: block;
-    max-width: 40%; 
+    max-width: 100%; 
     height: auto;   
     margin-bottom: 10px;
 }
@@ -140,6 +140,7 @@ footer p {
 @media (min-width: 992px) {
     body {
         margin-left: 200px;
+        margin-bottom: 50px;
     }
 
     nav {
