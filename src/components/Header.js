@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,10 +9,10 @@ function Header() {
       <nav>
         <ul>
           <li><img src="img/seoul.png" alt="Logo" style={{verticalAlign: 'center'}} /> SeoulTalk</li>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/words">WORDS</a></li>
-          <li><a href="/study">STUDY GUIDE</a></li>
-          <li><a href="/profile">PROFILE</a></li>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/words">WORDS</Link></li>
+          <li><Link to="/study">STUDY GUIDE</Link></li>
+          <li><Link to="/profile">PROFILE</Link></li>
         </ul>
       </nav>
 
