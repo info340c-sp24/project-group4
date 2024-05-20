@@ -3,6 +3,12 @@ body {
     text-align: center;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -19,7 +25,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-bottom: 150px;
+    margin-bottom: 20px; /* Adjusted for better spacing */
 }
 
 .start-button:hover {
@@ -30,6 +36,7 @@ img {
 .character-display {
     opacity: 0; 
     transition: opacity 0.5s ease-in-out;
+    width: 100%; /* Ensures quiz content takes full width */
 }
 
 .character-display.show { 
@@ -38,9 +45,10 @@ img {
 
 /* Answer Choice Button Styles */
 .choice {
-    display: inline-block;
+    display: block; /* Display choices as blocks */
+    width: 80%;   /* Adjust width as needed */
+    margin: 10px auto; /* Center the choices */
     padding: 10px 20px;
-    margin: 10px;
     font-size: 16px;
     background-color: #f0f0f0;  /* Light gray background */
     color: #333;                /* Darker text color */
@@ -48,6 +56,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center; /* Center text within buttons */
 }
 
 .choice:hover {
