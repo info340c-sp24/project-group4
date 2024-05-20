@@ -4,7 +4,7 @@ import Header from './components/Header';
 import MainPage from './pages/MainPage';
 import Footer from './components/Footer';
 import WordPage from './pages/WordPage';
-import Quizzes from './pages/Quizzes';
+import Quizzes from './pages/Quizzes'; // Make sure to import your Quizzes component
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<MainPage />} />
           <Route path="/words" element={<WordPage />} />
+          <Route path="/quizzes" element={<Quizzes />} /> 
         </Routes>
         <Footer />
       </div>
