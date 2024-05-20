@@ -11,6 +11,7 @@ function Header() {
           <li><img src="img/seoul.png" alt="Logo" style={{verticalAlign: 'center'}} /> SeoulTalk</li>
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/words">WORDS</Link></li>
+          <li><Link to="/quizzes">QUIZ</Link></li> 
           <li><Link to="/study">STUDY GUIDE</Link></li>
           <li><Link to="/profile">PROFILE</Link></li>
         </ul>

@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<MainPage />} />
           <Route path="/words" element={<WordPage />} />
+          <Route path="/quizzes" element={<Quizzes />} />
         </Routes>
         <Footer />
       </div>
