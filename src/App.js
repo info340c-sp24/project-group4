@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import MainPage from './pages/MainPage';
 import Footer from './components/Footer';
@@ -7,13 +8,16 @@ import Quizzes from './pages/Quizzes';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <MainPage />
-      {/* <WordPage /> */}
-      {/* <Quizzes /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
+          <Route path="/words" element={<WordPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
