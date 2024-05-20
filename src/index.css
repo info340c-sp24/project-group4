@@ -1,4 +1,14 @@
 /* General styling */
+body {
+    display: flex;          
+    min-height: 100vh;     
+    flex-direction: column; 
+}
+
+main { 
+    flex: 1; 
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Rubik';
@@ -88,10 +98,10 @@ input, label {
 }
 
 .card img {
-    display: block;  
-    width: 35%;  
-    height: auto;    
-    margin-bottom: 10px; 
+    display: block;
+    max-width: 40%; 
+    height: auto;   
+    margin-bottom: 10px;
 }
 
 img.profile-icon {
@@ -106,14 +116,14 @@ img.welcome-icon {
 
 footer {
     text-align: center;
-    padding: 5px 10px; /* Reduced padding */
-    font-size: 12px; /* Smaller font size */
-    background-color: #8ccfff; /* Optional: adding a background color */
-    color: #fff; /* Optional: changing text color for better contrast */
+    padding: 5px 10px; 
+    font-size: 12px; 
+    background-color: #8ccfff;
+    color: #fff; 
 }
 
 footer p {
-    margin: 2px 0; /* Reduced margin between paragraphs */
+    margin: 2px 0; 
 }
 
 @media (max-width: 598px) {
@@ -139,4 +149,12 @@ footer p {
     .hamburger {
         display: none;
     }
+}
+
+/* Prevent footer overlap in fullscreen */
+@media (display-mode: fullscreen) {
+  footer {
+    position: static; 
+    bottom: auto;   
+  }
 }
