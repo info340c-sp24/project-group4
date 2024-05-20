@@ -8,7 +8,8 @@ export default function Writing(props) {
     const [question, setQuestion] = useState('What is the word for "School" in Korean?');
 
     const questions = [
-        {}
+        'What is the word for "House" in Korean?'
+
     ]
 
     const selectCharacter = (char) => {

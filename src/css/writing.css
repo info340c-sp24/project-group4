@@ -43,8 +43,10 @@ footer {
 
 button {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-bottom: 60px;
 }
+
+
 
 @media (min-width: 992px) {
     .grid-item {

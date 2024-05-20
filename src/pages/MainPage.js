@@ -26,7 +26,7 @@ function MainPage() {
             <div className="card-content">
               <h3>Progress</h3>
               <p>Track your learning progress and achievements.</p>
-              <a href="login.html" className="btn">Explore</a>
+              <Link to="/profile" className="btn">Explore</Link>
             </div>
           </div>
           <div className="card">
@@ -34,7 +34,7 @@ function MainPage() {
             <div className="card-content">
               <h3>Writing Practice</h3>
               <p>Practice writing Korean characters and sentences.</p>
-              <Link to="/writing" className="btn">Explore</Link>
+              <Link to="/words" className="btn">Explore</Link>
             </div>
           </div>
           <div className="card">
