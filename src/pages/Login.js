@@ -5,21 +5,21 @@ import '../css/login.css';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState(null); // Add state to track the logged-in user
-    const [mode, setMode] = useState('login');  // 'login' or 'signup'
+    const [user, setUser] = useState(null); 
+    const [mode, setMode] = useState('login');
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
-            setUser(user); // Set user if logged in, null otherwise
+            setUser(user);
         });
-        return () => unsubscribe(); // Cleanup subscription
+        return () => unsubscribe();
     }, []);
 
     const handleLogin = (event) => {
         event.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                setUser(userCredential.user); // Update user state upon successful login
+                setUser(userCredential.user);
                 console.log("Logged in user:", userCredential.user);
             })
             .catch((error) => {
@@ -32,7 +32,7 @@ function Login() {
         event.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                setUser(userCredential.user); // Update user state upon successful signup
+                setUser(userCredential.user);
                 console.log("Account created:", userCredential.user);
             })
             .catch((error) => {
