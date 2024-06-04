@@ -24,6 +24,10 @@ header, footer {
     padding: 10px;
 }
 
+header a.hamburger {
+    text-align: right;
+}
+
 /* Style navigation sidebar */
 nav {
     display: none;
@@ -43,7 +47,46 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
 
+/* mobile navigation bar */
+nav.mobile-nav {
+    display: none; /* Hide the navigation by default on mobile */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #F9F6F0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+nav.mobile-nav.active {
+    display: flex; /* Show the mobile navigation when active */
+    transform: translateX(0); /* Slide-in the mobile navigation */
+}
+
+nav.mobile-nav ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+nav.mobile-nav ul li {
+    margin: 20px 0;
+}
+  
+nav.mobile-nav .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 36px;
+    z-index: 2;
 }
 
 nav li {
@@ -99,7 +142,7 @@ input, label {
 
 .card img {
     display: block;
-    max-width: 40%; 
+    max-width: 100%; 
     height: auto;   
     margin-bottom: 10px;
 }
@@ -137,9 +180,10 @@ footer p {
 }
 
 /* Change layout for large screens */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     body {
         margin-left: 200px;
+        margin-bottom: 50px;
     }
 
     nav {

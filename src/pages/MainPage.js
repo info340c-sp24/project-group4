@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function MainPage() {
   return (
-    <>
+    <div>
     <main className="container">
       <section>
         <h2>Welcome to SeoulTalk <img src="img/palace.png" alt="Welcome Icon" className="welcome-icon" style={{ verticalAlign: 'middle' }} /></h2>
@@ -48,7 +49,7 @@ function MainPage() {
         </div>
       </section>
     </main>
-    </>
+    </div>
   );
 }
 
