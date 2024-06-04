@@ -9,17 +9,16 @@ function Login() {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        auth.signInWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Successful login actions, e.g., redirecting or updating UI
+                // Process userCredential if needed
                 console.log("Logged in user:", userCredential.user);
             })
             .catch((error) => {
-                // Handle login errors
-                console.error("Error logging in:", error.message);
+                console.error("Login failed:", error);
                 alert("Login failed: " + error.message);
             });
-    };
+    };    
 
     
     const handleSignup = (event) => {
