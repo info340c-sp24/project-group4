@@ -154,7 +154,6 @@ footer p {
 /* Prevent footer overlap in fullscreen */
 @media (display-mode: fullscreen) {
   footer {
-    position: static; 
-    bottom: auto;   
+    bottom: 0;   
   }
 }
