@@ -37,10 +37,20 @@ function Header() {
       </nav>
 
       <form>
-          <label htmlFor="search">Search:</label>
-          <input type="text" id="search" name="search" />
           <label htmlFor="filter">Filter:</label>
-          <input type="text" id="filter" name="filter" />
+          <select id="filter" name="filter">
+            <option value="">All Levels</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <label htmlFor="category">Category:</label>
+          <select id="category" name="category">
+            <option value="">All Categories</option>
+            <option value="quizzes">Quizzes</option>
+            <option value="listening">Listening</option>
+            <option value="writing">Writing</option>
+          </select>
           <button type="submit">Submit</button>
           <hr />
       </form>
