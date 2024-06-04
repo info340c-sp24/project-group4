@@ -1,32 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
-  const [filter, setFilter] = useState('');
-  const navigate = useNavigate();
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const handleFilterChange = (event) => {
-    setFilter(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (filter) {
-      // Navigate to the appropriate route based on the selected filter
-      switch (filter) {
-        case 'quizzes':
-          navigate('/quizzes');
-          break;
-        case 'listening':
-          navigate('/listening');
-          break;
-        case 'writing':
-          navigate('/writing');
-          break;
-        default:
-          // Handle default case
-      }
-    }
+  const handleNavClick = () => {
+    setShowMobileNav(!showMobileNav);
   };
 
   return (
@@ -59,7 +38,14 @@ function Header() {
 
       <form>
           <label htmlFor="filter">Filter:</label>
-          <select id="filter" name="category">
+          <select id="filter" name="filter">
+            <option value="">All Levels</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <label htmlFor="category">Category:</label>
+          <select id="category" name="category">
             <option value="">All Categories</option>
             <option value="quizzes">Quizzes</option>
             <option value="listening">Listening</option>
