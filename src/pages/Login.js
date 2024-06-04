@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { auth, database, createUserWithEmailAndPassword, signInWithEmailAndPassword, ref, set, onValue } from '../firebase';
-import '../css/login.css'; // Make sure your CSS path is correct
+import '../css/login.css';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ function Login() {
     const [age, setAge] = useState('');
     const [phone, setPhone] = useState('');
     const [user, setUser] = useState(null);
-    const [mode, setMode] = useState('login'); // Toggle between 'login' and 'signup'
+    const [mode, setMode] = useState('login');
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
@@ -23,7 +23,7 @@ function Login() {
                 setUser(null);
             }
         });
-        return () => unsubscribe(); // Cleanup subscription on unmount
+        return () => unsubscribe();
     }, []);
 
     const handleLogin = (event) => {
