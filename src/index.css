@@ -128,6 +128,17 @@ input, label {
     margin-right: 4px;
 }
 
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 /* Style cards */
 .card {
     display: flex;            
