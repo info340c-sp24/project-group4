@@ -24,6 +24,10 @@ export default function Writing(props) {
         {
             question: 'What is the word for "Hello" (formal) in Korean?',
             answer: '안녕하세요'
+        },
+        {
+            question: 'Nice work! You have completed the writing/typing practice section! You can use this area for free writing now. We recommend you check out our other quizzes!',
+            answer : ''
         }
     ];
 
@@ -48,7 +52,7 @@ export default function Writing(props) {
             setShowFeedback(false);
             setWritingAreaText('');
         } else {
-            // End of quiz
+            
         }
     };
 
@@ -73,7 +77,7 @@ export default function Writing(props) {
             )}
             <div className="navigation-buttons">
                 <button className="prev-button" onClick={goToPreviousQuestion} disabled={questionIndex === 0}>Previous</button>
-                 <button className="next-button" onClick={goToNextQuestion} disabled={questionIndex === questions.length - 1}>Next</button>
+                 <button className="next-button" onClick={goToNextQuestion} disabled={questionIndex === questions.length - 1}>{questionIndex === questions.length - 2 ? 'Finish' : 'Next'}</button>
             </div>
             <div className="grid-container">
 
