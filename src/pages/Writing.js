@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/writing.css'
+import { Link } from 'react-router-dom';
 import * as hangul from 'hangul-js';
 
 
@@ -66,19 +67,37 @@ export default function Writing(props) {
 
     return (
         <main>
-            <h1 className="writing-header">Practice Typing Words!</h1>
-
-            <p>{question.question}</p>
-            <div id="writing-area">{writingAreaText}</div>
-            {showFeedback && (
+          <h1 className="writing-header">Practice Typing Words!</h1>
+    
+          {questionIndex < questions.length - 1 ? ( // Conditional rendering for questions
+            <>
+              <p>{question.question}</p>
+              <div id="writing-area">{writingAreaText}</div>
+              {showFeedback && (
                 <div className="feedback">
-                    {writingAreaText === question.answer ? "Correct!" : "Wrong answer"}
+                  {writingAreaText === question.answer ? "Correct!" : "Wrong answer"}
                 </div>
-            )}
-            <div className="navigation-buttons">
+              )}
+              <div className="navigation-buttons">
                 <button className="prev-button" onClick={goToPreviousQuestion} disabled={questionIndex === 0}>Previous</button>
-                 <button className="next-button" onClick={goToNextQuestion} disabled={questionIndex === questions.length - 1}>{questionIndex === questions.length - 2 ? 'Finish' : 'Next'}</button>
-            </div>
+                <button className="next-button" onClick={goToNextQuestion}>{questionIndex === questions.length - 2 ? 'Finish' : 'Next'}</button>
+              </div>
+            </>
+            ) : (
+                <div className="result-message">
+                    <h2>Nice work!</h2>
+                    <p>You have completed the word quiz.</p>
+                    <div className="recommendations">
+                        <h3>Check out these pages next:</h3>
+                        <ul>
+                        <li><Link to="/study">Study Guide</Link></li>
+                        <li><Link to="/words">Words</Link></li>
+                        <li><Link to="/quizzes">Quiz</Link></li> 
+                        </ul>
+                    </div>
+                 </div>
+            )}
+
             <div className="grid-container">
 
                 <div className="grid-item" onClick={() => selectCharacter('ㄱ')}>ㄱ</div>

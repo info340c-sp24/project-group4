@@ -18,9 +18,7 @@ function Header() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (selectedCategory === 'listening') {
-      navigate('/words');
-    } else if (selectedCategory) {
+    if (selectedCategory) {
       navigate(`/${selectedCategory}`);
     }
   };
@@ -33,7 +31,7 @@ function Header() {
         setPageTitle("Home");
         break;
       case "/words":
-        setPageTitle("Listening");
+        setPageTitle("Words");
         break;
       case "/quizzes":
         setPageTitle("Quizzes");
@@ -88,7 +86,7 @@ function Header() {
           <select id="category" name="category" onChange={handleCategoryChange}>
             <option value="">All Categories</option>
             <option value="quizzes">Quizzes</option>
-            <option value="listening">Listening</option>
+            <option value="words">Words</option>
             <option value="writing">Writing</option>
             <option value="study">Study Guide</option>
           </select>

@@ -40,6 +40,8 @@ function WordPage() {
             setShowFeedback(false);
         } else {
             setQuizFinished(true);
+            setSelectedOption(null);
+            setShowFeedback(false);
         }
     };
 
