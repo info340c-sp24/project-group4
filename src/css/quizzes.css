@@ -79,3 +79,30 @@ img {
     background-color: #f44336; /* Red for incorrect */
     color: white;
 }
+
+.result-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result-message h2 {
+    color: #4CAF50;
+}
+
+.recommendations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendations li {
+    margin: 10px 0;
+}
+
+.recommendations a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.recommendations a:hover {
+    text-decoration: underline;
+}

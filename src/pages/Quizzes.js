@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/quizzes.css';
 
 function Quizzes() {
@@ -6,6 +7,7 @@ function Quizzes() {
     const [selectedOption, setSelectedOption] = useState(null);
     const [showFeedback, setShowFeedback] = useState(false);
     const [showQuiz, setShowQuiz] = useState(false);
+    const [quizFinished, setQuizFinished] = useState(false);
     const quizQuestions = [
         {
             questionText: "안녕하세요 means what in korean?",
@@ -37,7 +39,7 @@ function Quizzes() {
             setSelectedOption(null);
             setShowFeedback(false);
         } else {
-            // End of quiz
+            setQuizFinished(true);
         }
     };
 
@@ -66,40 +68,55 @@ function Quizzes() {
                                 </button>
                             </div>
                         ) : (
-                            <>
-                                <div className="character-display">
-                                    <div className="character-box">
-                                        <p>{question.questionText}</p>
-                                    </div>
-                                </div>
-
-                                <div className="choices" role="radiogroup">
-                                    {question.options.map((option, index) => (
-                                        <div 
-                                            className={`choice ${selectedOption === option ? (option === question.correctAnswer ? 'correct' : 'incorrect') : ''}`} 
-                                            key={index} 
-                                            onClick={() => handleOptionClick(option)} 
-                                            tabIndex="0" 
-                                            role="radio" 
-                                            aria-checked={selectedOption === option}
-                                        >
-                                            <span className="label">{index + 1}.</span>
-                                            <span className="text">{option}</span>
+                            !quizFinished ? (
+                                <>
+                                    <div className="character-display">
+                                        <div className="character-box">
+                                            <p>{question.questionText}</p>
                                         </div>
-                                    ))}
-                                </div>
-
-                                {showFeedback && (
-                                    <div className="feedback">
-                                        {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
                                     </div>
-                                )}
 
-                                <div className="navigation-buttons">
-                                    <button className="prev-button" onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>Previous</button>
-                                    <button className="next-button" onClick={goToNextQuestion}>{currentQuestionIndex === quizQuestions.length - 1 ? 'Finish' : 'Next'}</button>
+                                    <div className="choices" role="radiogroup">
+                                        {question.options.map((option, index) => (
+                                            <div 
+                                                className={`choice ${selectedOption === option ? (option === question.correctAnswer ? 'correct' : 'incorrect') : ''}`} 
+                                                key={index} 
+                                                onClick={() => handleOptionClick(option)} 
+                                                tabIndex="0" 
+                                                role="radio" 
+                                                aria-checked={selectedOption === option}
+                                            >
+                                                <span className="label">{index + 1}.</span>
+                                                <span className="text">{option}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {showFeedback && (
+                                        <div className="feedback">
+                                            {selectedOption === question.correctAnswer ? "Correct!" : "Wrong answer"}
+                                        </div>
+                                    )}
+
+                                    <div className="navigation-buttons">
+                                        <button className="prev-button" onClick={goToPreviousQuestion} disabled={currentQuestionIndex === 0}>Previous</button>
+                                        <button className="next-button" onClick={goToNextQuestion}>{currentQuestionIndex === quizQuestions.length - 1 ? 'Finish' : 'Next'}</button>
+                                    </div>
+                                </>
+                            ) : (
+                                <div className="result-message">
+                                    <h2>Nice work!</h2>
+                                    <p>You have completed the quiz.</p>
+                                    <div className="recommendations">
+                                        <h3>Check out these pages next:</h3>
+                                        <ul>
+                                            <li><Link to="/study">Study Guide</Link></li>
+                                            <li><Link to="/words">Words</Link></li>
+                                            <li><Link to="/writing">Writing</Link></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </>
+                            )
                         )}
                     </div>
                 </section>
