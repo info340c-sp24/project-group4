@@ -19,6 +19,30 @@ main {
     height: auto;
 }
 
+header {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
+}
+
+.logo-and-home { 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+#logo {
+    width: 25px;
+    height: auto;
+    margin-right: 10px; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
 header, footer {
     text-align: center;
     padding: 10px;
@@ -126,17 +150,6 @@ header .hamburger {
 
 input, label {
     margin-right: 4px;
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 /* Style cards */

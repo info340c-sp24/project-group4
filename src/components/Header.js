@@ -1,17 +1,64 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation(); 
+  const [pageTitle, setPageTitle] = useState("Home");
 
   const handleNavClick = () => {
     setShowMobileNav(!showMobileNav);
   };
 
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (selectedCategory === 'listening') {
+      navigate('/words');
+    } else if (selectedCategory) {
+      navigate(`/${selectedCategory}`);
+    }
+  };
+
+  useEffect(() => {
+    // Update page title on location change
+    const path = location.pathname;
+    switch (path) {
+      case "/":
+        setPageTitle("Home");
+        break;
+      case "/words":
+        setPageTitle("Listening");
+        break;
+      case "/quizzes":
+        setPageTitle("Quizzes");
+        break;
+      case "/writing":
+        setPageTitle("Writing");
+        break;
+      case "/study":
+        setPageTitle("Study Guide");
+        break;
+      case "/profile":
+        setPageTitle("Profile");
+        break;
+      default:
+        setPageTitle("SeoulTalk"); // For unknown pages
+    }
+  }, [location]);
+
   return (
     <header>
       <a href="#" className="hamburger" onClick={handleNavClick}><span className="material-icons" aria-label="Menu">menu</span></a>
-      <h1><img src="img/seoul.png" alt="Logo" style={{verticalAlign: 'center'}} /> Home</h1>
+      <h1>
+        <img src="img/seoul.png" alt="Logo" style={{verticalAlign: 'center'}} /> 
+        <span id="pageTitle">{pageTitle}</span>
+      </h1>
       <nav>
         <ul>
           <li><img src="img/seoul.png" alt="Logo" style={{verticalAlign: 'center'}} /> SeoulTalk</li>
@@ -36,20 +83,14 @@ function Header() {
         </ul>
       </nav>
 
-      <form>
-          <label htmlFor="filter">Filter:</label>
-          <select id="filter" name="filter">
-            <option value="">All Levels</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-          <label htmlFor="category">Category:</label>
-          <select id="category" name="category">
+      <form onSubmit={handleFormSubmit}>
+          <label htmlFor="category">Search:</label>
+          <select id="category" name="category" onChange={handleCategoryChange}>
             <option value="">All Categories</option>
             <option value="quizzes">Quizzes</option>
             <option value="listening">Listening</option>
             <option value="writing">Writing</option>
+            <option value="study">Study Guide</option>
           </select>
           <button type="submit">Submit</button>
           <hr />
